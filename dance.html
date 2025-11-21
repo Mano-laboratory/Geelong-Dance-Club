@@ -7,19 +7,38 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+            background: #fff0f5;
             color: #333;
         }
         header {
-            background: #111;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
             color: #fff;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #ff7e5f;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            padding: 15px 0;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         .hero {
             background: url('https://images.unsplash.com/photo-1515162305284-9cd3db39aa66?auto=format&fit=crop&w=1350&q=80') center/cover;
-            height: 70vh;
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -27,58 +46,142 @@
             color: white;
             padding: 20px;
         }
-        .hero h1 {
-            font-size: 3rem;
+        .hero h2 {
+            font-size: 4rem;
             background: rgba(0,0,0,0.5);
             padding: 20px;
             border-radius: 10px;
         }
         section {
-            padding: 40px 20px;
-            max-width: 900px;
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: auto;
         }
-        .cta {
+        section h2 {
+            font-size: 2.5rem;
             text-align: center;
+            margin-bottom: 30px;
+            color: #ff4b2b;
+        }
+        .about, .workshops, .contact {
+            background: #ffe6e6;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .about img, .workshops img {
+            width: 100%;
+            border-radius: 15px;
             margin-top: 20px;
         }
-        .cta a {
-            background: #111;
-            color: #fff;
-            padding: 12px 25px;
+        .workshop-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .workshop-table th, .workshop-table td {
+            border: 1px solid #ff7e5f;
+            padding: 12px;
+            text-align: center;
+        }
+        .workshop-table th {
+            background: #ff7e5f;
+            color: white;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ff7e5f;
             border-radius: 8px;
-            text-decoration: none;
+        }
+        .contact-form button {
+            background: #ff4b2b;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
             font-size: 1.1rem;
         }
+        .contact-form button:hover {
+            background: #ff416c;
+        }
         footer {
-            background: #111;
+            background: #ff416c;
             color: #fff;
             text-align: center;
-            padding: 15px;
-            margin-top: 40px;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h2>Geelong Dance Club</h2>
+        <h1>Geelong Dance Club</h1>
     </header>
 
+    <nav>
+        <a href="#about">About</a>
+        <a href="#workshops">Workshops</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="hero">
-        <h1>Move. Groove. Connect.</h1>
+        <h2>Move. Groove. Connect.</h2>
     </div>
 
-    <section>
-        <h2>About Us</h2>
-        <p>Welcome to the Geelong Dance Club! A fun, energetic and inclusive space for dancers of all levels. Whether you're into hip-hop, western, freestyle, or beginners looking to learn, this club brings the community together through rhythm and movement.</p>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Mano Bharathi Chandran, the founder of Geelong Dance Club. I am passionate about dance, community, and bringing people together through movement. Our club welcomes dancers of all levels, from beginners to advanced, across multiple styles including hip-hop, freestyle, and contemporary.</p>
+        <img src="https://images.unsplash.com/photo-1589820296156-1c0a10d92f91?auto=format&fit=crop&w=1350&q=80" alt="Dance Club About Image" />
     </section>
 
-    <section>
-        <h2>Join the Club</h2>
-        <p>Weekly sessions, beginner-friendly workshops, and performance opportunities. Come dance, stay fit, and meet new people in Geelong!</p>
-        <div class="cta">
-            <a href="mailto:yourclubemail@example.com">Join Now</a>
-        </div>
+    <section id="workshops" class="workshops">
+        <h2>Workshops & Timings</h2>
+        <p>Join our weekly workshops and improve your dance skills. All sessions are beginner-friendly and high-energy!</p>
+        <table class="workshop-table">
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Dance Style</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>6:00 PM - 7:30 PM</td>
+                <td>Hip-Hop</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>6:00 PM - 7:30 PM</td>
+                <td>Freestyle</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>6:00 PM - 7:30 PM</td>
+                <td>Contemporary</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>All Styles Workshop</td>
+            </tr>
+        </table>
+        <img src="https://images.unsplash.com/photo-1598239860847-5f7736504c8d?auto=format&fit=crop&w=1350&q=80" alt="Dance Workshop Image" />
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for joining, questions, or private classes.</p>
+        <p><strong>Email:</strong> manodhoni777@gmail.com</p>
+        <p><strong>Phone:</strong> 0459 583 377</p>
+        <p><strong>Location:</strong> Belmont, Geelong, VIC</p>
+
+        <form class="contact-form" action="mailto:manodhoni777@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
