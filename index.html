@@ -1,204 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geelong Dance Club</title>
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: #fff0f5;
+            background-color: #fff;
             color: #333;
         }
+        a {
+            text-decoration: none;
+            color: #ff4081;
+        }
         header {
-            background: linear-gradient(90deg, #ff416c, #ff4b2b);
-            color: #fff;
-            padding: 30px 20px;
+            background: linear-gradient(90deg, #ff4081, #ff8c00);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
         }
         header h1 {
-            font-size: 3rem;
-            margin: 0;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #ff7e5f;
+            background: #333;
         }
         nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
-            padding: 15px 0;
+            color: white;
+            padding: 15px 20px;
+            display: inline-block;
         }
         nav a:hover {
-            text-decoration: underline;
-        }
-        .hero {
-            background: url('https://images.unsplash.com/photo-1515162305284-9cd3db39aa66?auto=format&fit=crop&w=1350&q=80') center/cover;
-            height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-        .hero h2 {
-            font-size: 4rem;
-            background: rgba(0,0,0,0.5);
-            padding: 20px;
-            border-radius: 10px;
+            background-color: #ff4081;
         }
         section {
             padding: 60px 20px;
             max-width: 1000px;
             margin: auto;
         }
-        section h2 {
-            font-size: 2.5rem;
+        h2 {
             text-align: center;
-            margin-bottom: 30px;
-            color: #ff4b2b;
-        }
-        .about, .workshops, .contact {
-            background: #ffe6e6;
-            border-radius: 15px;
-            padding: 40px;
             margin-bottom: 40px;
+            font-size: 2em;
+            color: #ff4081;
         }
-        .about img, .workshops img {
+        .bio img, .program img, .workshop img {
             width: 100%;
             border-radius: 15px;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
-        .workshop-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
+        .programs-list, .workshop-list {
+            list-style: none;
+            padding: 0;
         }
-        .workshop-table th, .workshop-table td {
-            border: 1px solid #ff7e5f;
-            padding: 12px;
-            text-align: center;
-        }
-        .workshop-table th {
-            background: #ff7e5f;
-            color: white;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            border: 1px solid #ff7e5f;
-            border-radius: 8px;
-        }
-        .contact-form button {
-            background: #ff4b2b;
-            color: white;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
-        .contact-form button:hover {
-            background: #ff416c;
+        .programs-list li, .workshop-list li {
+            margin-bottom: 15px;
         }
         footer {
-            background: #ff416c;
-            color: #fff;
+            background-color: #333;
+            color: white;
             text-align: center;
+            padding: 40px 20px;
+        }
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 15px;
             padding: 20px;
+            flex: 1 1 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Geelong Dance Club</h1>
-    </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#workshops">Workshops</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- Header / Hero -->
+<header>
+    <h1>Kuthu is our vibe</h1>
+    <p>Place for people to explore their dance, explore the way of their life, always entertainment, be happy and show the world who you are.</p>
+</header>
 
-    <div class="hero">
-        <h2>Move. Groove. Connect.</h2>
+<!-- Navigation -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#programs">Cultural Programs</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- About / Bio -->
+<section id="about" class="bio">
+    <h2>About Me</h2>
+    <div class="flex">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Dance">
+            <p>I am a graduate from National Institute of Technology Puducherry, India. I was part of the dance club and lead dancer during my bachelor’s life for 4 years. I specialize in South Indian folk styles but also perform North Indian songs and western styles including breaking, hip-hop, freestyle, and light feet. I have performed and led my team in several cultural programs and actively choreograph, edit songs and videos, and manage Instagram content. I am an all-rounder dancer and performer.</p>
+        </div>
     </div>
+</section>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-          Founder and lead instructor of the Geelong Dance Club, passionate about bringing the community together through movement, rhythm, and creativity. Experienced in choreographing and teaching multiple dance styles, including hip-hop, contemporary, and freestyle, to dancers of all ages and skill levels. Skilled at designing engaging workshops, structuring classes for progressive learning, and creating a welcoming, high-energy environment that encourages participation and growth. Adept at event organization, social media promotion, and building a vibrant community of dance enthusiasts. Committed to fostering confidence, teamwork, and self-expression through dance while maintaining a safe and inclusive environment. Enthusiastic about connecting with local schools, organizations, and community groups to expand access to dance education and performance opportunities. Driven to deliver high-quality, fun, and inspiring experiences that promote physical wellness, artistic expression, and community engagement.  </p>
-      
-        <img src="images/dance1.jpg" alt="Dance 1" style="width:100%; border-radius:15px;">
-       
-        
-        
-    </section>
 
-    <section id="workshops" class="workshops">
-        <h2>Workshops & Timings</h2>
-        <p>Join our weekly workshops and improve your dance skills. All sessions are beginner-friendly and high-energy!</p>
-        <table class="workshop-table">
-            <tr>
-                <th>Day</th>
-                <th>Time</th>
-                <th>Dance Style</th>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>6:00 PM - 7:30 PM</td>
-                <td>Hip-Hop</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>6:00 PM - 7:30 PM</td>
-                <td>Freestyle</td>
-            </tr>
-            <tr>
-                <td>Friday</td>
-                <td>6:00 PM - 7:30 PM</td>
-                <td>Contemporary</td>
-            </tr>
-            <tr>
-                <td>Saturday</td>
-                <td>10:00 AM - 12:00 PM</td>
-                <td>All Styles Workshop</td>
-            </tr>
-        </table>
-        <img src="https://images.unsplash.com/photo-1598239860847-5f7736504c8d?auto=format&fit=crop&w=1350&q=80" alt="Dance Workshop Image" />
-    </section>
+<!-- Cultural Programs Section -->
+<section id="programs" class="program">
+    <h2>Cultural Programs</h2>
+    <ul class="programs-list">
+        <li><a href="festember.html">Festember - NIT Trichy</a></li>
+        <li><a href="puducherry_western.html">Puducherry State Western Dance Competition</a></li>
+        <li><a href="pecofest.html">PECOFEST - Puducherry Technological University</a></li>
+        <li><a href="leciel_gyanith.html">Le Ciel & GYANITH - NIT Puducherry</a></li>
+        <li><a href="others.html">And many more conferences & performances</a></li>
+    </ul>
+</section>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>Feel free to reach out for joining, questions, or private classes.</p>
-        <p><strong>Email:</strong> bhaghavaane@gmail.com</p>
-        <p><strong>Phone:</strong> 0459 583 377</p>
-        <p><strong>Location:</strong> Belmont, Geelong, VIC</p>
+<!-- Workshops -->
+<section id="workshops" class="workshop">
+    <h2>Workshops</h2>
+    <p>All people from different age groups are welcome: children, boys & girls, and adults. Separate workshops will be conducted depending on the number of participants.</p>
+    <ul class="workshop-list">
+        <li>Monday, Tuesday, Thursday - 6:00 PM to 7:00 PM</li>
+        <li>Location: Belmont, Geelong, VIC</li>
+    </ul>
+    <div class="flex">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Workshop">
+            <p>Join fun and engaging dance workshops for all ages. Explore styles from folk to western, improve your skills, and enjoy performing with others.</p>
+        </div>
+    </div>
+</section>
 
-      <form class="contact-form" action="https://formsubmit.co/bhaghavaane@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out for joining, questions, or private classes.</p>
+    <ul>
+        <li>Email: <a href="mailto:bhaghavaane@gmail.com">bhaghavaane@gmail.com</a></li>
+        <li>Phone: 0459 583 377</li>
+        <li>Location: Belmont, Geelong, VIC</li>
+    </ul>
+    <form action="https://formsubmit.co/bhaghavaane@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom:10px;">
+        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom:10px;">
+        <textarea name="message" rows="6" placeholder="Your Message" required style="width:100%; padding:10px; margin-bottom:10px;"></textarea>
+        <button type="submit" style="padding: 10px 20px; background-color:#ff4081; color:white; border:none; border-radius:5px;">Send Message</button>
+    </form>
+</section>
 
-    </section>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Geelong Dance Club. All rights reserved.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2025 Geelong Dance Club. All rights reserved.</p>
-    </footer>
 </body>
 </html>
-
-
-
-
-
-
